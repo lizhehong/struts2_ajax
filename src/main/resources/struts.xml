@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--创建时间：2015年5月7日-->
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	<struts>
+		<package name="person" extends="json-default" namespace="/">
+			<action name="personAction_*" method="{1}" class="cn.ITHong.strutsajax.action.PersonAction">
+				<result name="success" type="json"></result> 
+				<interceptor-ref name="modelDriven"></interceptor-ref>  
+                 <!-- 实现模型驱动的拦截器   -->
+       			 <interceptor-ref name="defaultStack"></interceptor-ref> 
+			</action>
+		</package>
+	</struts>
